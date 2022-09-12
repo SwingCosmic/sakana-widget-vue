@@ -41,7 +41,7 @@ interface SakanaWidgetOptions {
    */
   rotate?: number;
 }
-const defaultOptions: SakanaWidgetOptions = {
+export const defaultOptions: SakanaWidgetOptions = {
   size: 200,
   autoFit: false,
   character: 'chisato',

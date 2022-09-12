@@ -14,10 +14,10 @@ const umdLibrary = {
 // demo site
 const site = merge(common, {
   mode: 'production',
-  entry: path.resolve(__dirname, '../src/index.ts'),
+  entry: path.resolve(__dirname, '../src/main.ts'),
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'index.[contenthash:8].min.js',
+    filename: 'main.[contenthash:8].min.js',
     library: umdLibrary,
   },
   optimization: {
@@ -39,7 +39,7 @@ const site = merge(common, {
 // for cdn script
 const cdn = merge(common, {
   mode: 'production',
-  entry: path.resolve(__dirname, '../src/index.ts'),
+  entry: path.resolve(__dirname, '../src/main.ts'),
   output: {
     path: path.resolve(__dirname, '../lib'),
     filename: 'sakana.min.js',
@@ -59,10 +59,10 @@ const cdn = merge(common, {
 // for umd library script
 const umd = merge(common, {
   mode: 'production',
-  entry: path.resolve(__dirname, '../src/index.ts'),
+  entry: path.resolve(__dirname, '../src/main.ts'),
   output: {
     path: path.resolve(__dirname, '../lib'),
-    filename: 'index.js',
+    filename: 'main.js',
     library: umdLibrary,
   },
   optimization: {
@@ -73,10 +73,10 @@ const umd = merge(common, {
 // for esm library script
 const esm = merge(common, {
   mode: 'production',
-  entry: path.resolve(__dirname, '../src/index.ts'),
+  entry: path.resolve(__dirname, '../src/main.ts'),
   output: {
     path: path.resolve(__dirname, '../lib'),
-    filename: 'index.esm.js',
+    filename: 'main.esm.js',
     library: {
       type: 'module',
     },

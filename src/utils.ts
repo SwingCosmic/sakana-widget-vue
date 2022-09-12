@@ -1,5 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+declare global {
+  interface Window {
+    structuredClone(value: any): any;
+  }
+}
+
 export type RequiredDeep<T> = {
   [K in keyof T]: RequiredDeep<T[K]>;
 } & Required<T>;

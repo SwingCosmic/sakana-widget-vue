@@ -2,6 +2,9 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts', '.jsx', '.tsx'],
   },
+  externals: {
+    "vue": "commonjs vue"
+  },
   module: {
     rules: [
       {

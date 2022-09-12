@@ -12,7 +12,7 @@ const umdLibrary = {
 
 module.exports = merge(common, {
   mode: 'development',
-  entry: path.resolve(__dirname, '../src/index.ts'),
+  entry: path.resolve(__dirname, '../src/dev.ts'),
   output: {
     path: path.resolve(__dirname, '../lib'),
     library: umdLibrary,

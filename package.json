@@ -2,7 +2,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "name": "sakana-widget",
+  "name": "@lovekicher/sakana-widget-vue",
   "version": "2.3.0",
   "description": "Sakana widget for Web. | 网页小组件版本的石蒜模拟器。",
   "keywords": [
@@ -20,16 +20,16 @@
   "files": [
     "lib"
   ],
-  "types": "./lib/index.d.ts",
-  "main": "./lib/index.js",
-  "module": "./lib/index.esm.js",
+  "types": "./lib/main.d.ts",
+  "main": "./lib/main.js",
+  "module": "./lib/main.esm.js",
   "unpkg": "./lib/sakana.min.js",
   "jsdelivr": "./lib/sakana.min.js",
   "exports": {
     ".": {
-      "types": "./lib/index.d.ts",
-      "require": "./lib/index.js",
-      "import": "./lib/index.esm.js"
+      "types": "./lib/main.d.ts",
+      "require": "./lib/main.js",
+      "import": "./lib/main.esm.js"
     }
   },
   "scripts": {
@@ -37,11 +37,16 @@
     "build": "rimraf ./dist && rimraf ./lib && tsc && webpack --config ./.webpack/webpack.prod.js"
   },
   "dependencies": {
-    "@juggle/resize-observer": "^3.4.0"
+    "@juggle/resize-observer": "^3.4.0",
+    "lodash": "^4.17.21",
+    "vue-demi": "^0.13.11"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.185",
+    "@types/webpack-env": "^1.18.0",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
+    "@vue/composition-api": "^1.7.0",
     "css-loader": "^6.7.1",
     "dsr-design": "~3.5.1",
     "esbuild-loader": "^2.19.0",
@@ -52,10 +57,21 @@
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "svgo-loader": "^3.0.1",
-    "typescript": "^4.8.2",
+    "typescript": "~4.2.0",
+    "vue3": "npm:vue@^3.0.0",
+    "vue": "~2.6.11",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.10.1",
     "webpack-merge": "^5.8.0"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "vue": "^2.6.0 || >= 3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
   }
 }
