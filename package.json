@@ -3,7 +3,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "name": "@lovekicher/sakana-widget-vue",
-  "version": "2.3.0",
+  "version": "2.3.2",
   "description": "Sakana widget for Web. | 网页小组件版本的石蒜模拟器。",
   "keywords": [
     "widget",
@@ -33,6 +33,7 @@
     }
   },
   "scripts": {
+    "lint": "eslint ./src",
     "dev": "webpack serve --config ./.webpack/webpack.dev.js",
     "build": "rimraf ./dist && rimraf ./lib && tsc && webpack --config ./.webpack/webpack.prod.js"
   },
