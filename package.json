@@ -4,19 +4,20 @@
   },
   "name": "@lovekicher/sakana-widget-vue",
   "version": "2.3.2",
-  "description": "Sakana widget for Web. | 网页小组件版本的石蒜模拟器。",
+  "private": false,
+  "description": "Sakana widget for Vue2/3 | Vue2/3版本的石蒜模拟器。",
   "keywords": [
     "widget",
     "lycoris-recoil",
     "lycoris",
     "recoil",
     "chisato",
-    "takina"
+    "takina",
+    "vue"
   ],
-  "author": "DSRKafuU <dsrkafuu@outlook.com> (https://dsrkafuu.net)",
-  "homepage": "https://sakana.dsrkafuu.net",
+  "author": "LoveKicher",
   "license": "MIT",
-  "repository": "github:dsrkafuu/sakana-widget",
+  "repository": "https://github.com/SwingCosmic/sakana-widget-vue",
   "files": [
     "lib"
   ],
@@ -35,7 +36,8 @@
   "scripts": {
     "lint": "eslint ./src",
     "dev": "webpack serve --config ./.webpack/webpack.dev.js",
-    "build": "rimraf ./dist && rimraf ./lib && tsc && webpack --config ./.webpack/webpack.prod.js"
+    "build": "rimraf ./dist && rimraf ./lib && tsc && webpack --config ./.webpack/webpack.prod.js",
+    "pub": "npm publish --access=public"
   },
   "dependencies": {
     "@juggle/resize-observer": "^3.4.0",
