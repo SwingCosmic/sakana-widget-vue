@@ -3,7 +3,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "name": "@lovekicher/sakana-widget-vue",
-  "version": "2.3.3",
+  "version": "2.3.3-fix1",
   "private": false,
   "description": "Sakana widget for Vue2/3 | Vue2/3版本的石蒜模拟器。",
   "keywords": [
@@ -19,7 +19,8 @@
   "license": "MIT",
   "repository": "https://github.com/SwingCosmic/sakana-widget-vue",
   "files": [
-    "lib"
+    "/lib",
+    "/src"
   ],
   "types": "./lib/main.d.ts",
   "main": "./lib/main.js",
