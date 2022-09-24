@@ -17,9 +17,9 @@ Vue组件包装的石蒜模拟器，通过`vue-demi`库实现了同时支持Vue2
 
 * 如果项目使用Vue3，只需要安装`vue-demi`
 
-## Quick Start
+## Install
 
-> 原始项目存在webpack兼容性问题，打包后的代码在加载时会报module相关的加载问题，目前只能通过源码引用
+> ⚠️ 原始项目存在webpack兼容性问题，打包后的代码在加载时会报module相关的加载问题，目前只能通过源码引用
 
 * Vue2
 
@@ -37,6 +37,37 @@ const app = createApp({});
 app.use(SakanaWidget);
 ```
 
+## Usage
+
+### Quick Start
+
+创建一个没有控制栏，并初始化为泷奈的组件
+
+```html
+<SakanaWidget :controls="false" character="takina"/>
+```
+### Props
+
+原有的`option`均作为组件prop传入，且支持响应式。
+如果选项不支持动态修改，会销毁实例并自动重建。
+
+支持的选项：
+
+* `autoFit`
+* `character`
+* `controls`
+* `rotate`
+* `size`
+* `stroke`
+* `threshold`
+
+`state`也作为prop传入并在修改时自动调用`setState`
+
+
+
+### 关于autoFit的限制
+
+✅ 无需要求父级DOM容器是一个BFC，内部已经提供了一个容器进行组件挂载
 ## License
 
 Released under MIT License, please note that the 2 default images **should not be used for any commercial activities**. This project used to be a secondary development based on [sakana-widget](https://github.com/dsrkafuu/sakana-widget).
