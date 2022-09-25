@@ -17,7 +17,7 @@ const site = merge(common, {
   entry: path.resolve(__dirname, '../src/main.ts'),
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'main.[contenthash:8].min.js',
+    filename: 'sakana.[contenthash:8].min.js',
     library: umdLibrary,
   },
   optimization: {
@@ -62,7 +62,7 @@ const umd = merge(common, {
   entry: path.resolve(__dirname, '../src/main.ts'),
   output: {
     path: path.resolve(__dirname, '../lib'),
-    filename: 'main.js',
+    filename: 'sakana.js',
     library: umdLibrary,
   },
   optimization: {
@@ -74,9 +74,13 @@ const umd = merge(common, {
 const esm = merge(common, {
   mode: 'production',
   entry: path.resolve(__dirname, '../src/main.ts'),
+  externals: {
+    "lodash": "module lodash",
+    "vue-demi": "commonjs vue-demi",
+  },
   output: {
     path: path.resolve(__dirname, '../lib'),
-    filename: 'main.esm.js',
+    filename: 'sakana.esm.js',
     library: {
       type: 'module',
     },

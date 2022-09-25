@@ -3,7 +3,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "name": "@lovekicher/sakana-widget-vue",
-  "version": "2.3.3-fix1",
+  "version": "2.3.4",
   "private": false,
   "description": "Sakana widget for Vue2/3 | Vue2/3版本的石蒜模拟器。",
   "keywords": [
@@ -19,26 +19,27 @@
   "license": "MIT",
   "repository": "https://github.com/SwingCosmic/sakana-widget-vue",
   "files": [
-    "/lib",
-    "/src"
+    "/lib"
   ],
   "types": "./lib/main.d.ts",
-  "main": "./lib/main.js",
-  "module": "./lib/main.esm.js",
+  "main": "./lib/sakana.js",
+  "module": "./lib/sakana.esm.js",
   "unpkg": "./lib/sakana.min.js",
   "jsdelivr": "./lib/sakana.min.js",
   "exports": {
     ".": {
       "types": "./lib/main.d.ts",
-      "require": "./lib/main.js",
-      "import": "./lib/main.esm.js"
+      "require": "./lib/sakana.js",
+      "import": "./lib/sakana.esm.js"
     }
   },
   "scripts": {
     "lint": "eslint ./src",
     "dev": "webpack serve --config ./.webpack/webpack.dev.js",
-    "build": "rimraf ./dist && rimraf ./lib && tsc && webpack --config ./.webpack/webpack.prod.js",
-    "pub": "npm publish --access=public"
+    "build": "gulp",
+    "pub": "npm publish --access=public",
+    "switch:vue2": "vue-demi-switch 2",
+    "switch:vue3": "vue-demi-switch 3 vue3"
   },
   "dependencies": {
     "@juggle/resize-observer": "^3.4.0",
@@ -52,9 +53,11 @@
     "@typescript-eslint/parser": "^5.36.1",
     "@vue/composition-api": "^1.7.0",
     "css-loader": "^6.7.1",
+    "del": "^4.1.0",
     "dsr-design": "~3.5.1",
     "esbuild-loader": "^2.19.0",
     "eslint": "^8.23.0",
+    "gulp": "^4.0.2",
     "html-webpack-plugin": "^5.5.0",
     "rimraf": "^3.0.2",
     "sass": "^1.54.8",
@@ -62,8 +65,8 @@
     "style-loader": "^3.3.1",
     "svgo-loader": "^3.0.1",
     "typescript": "~4.2.0",
-    "vue3": "npm:vue@^3.0.0",
     "vue": "~2.6.11",
+    "vue3": "npm:vue@^3.0.0",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.10.1",

@@ -6,11 +6,14 @@ import {
   computed,
   shallowRef,
   onMounted,
-  onBeforeUnmount
+  onBeforeUnmount,
+  PropType
 } from "vue-demi";
-import SakanaWidgetStandalone, { SakanaWidgetOptions, SakanaWidgetState, defaultOptions } from "..";
-import type { Prop } from "vue3";
+import SakanaWidgetStandalone, { SakanaWidgetOptions, SakanaWidgetState, defaultOptions } from "../index";
 import {pick, cloneDeep} from "lodash";
+
+// import type { Prop } from "vue3";
+type Prop<T> = PropType<T>;
 
 const optionKeys: (keyof SakanaWidgetOptions)[] = [
   "autoFit", "character", "controls", "rotate", "size", "stroke", "threshold"
