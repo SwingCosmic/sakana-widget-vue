@@ -3,7 +3,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "name": "@lovekicher/sakana-widget-vue",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "private": false,
   "description": "Sakana widget for Vue2/3 | Vue2/3版本的石蒜模拟器。",
   "keywords": [

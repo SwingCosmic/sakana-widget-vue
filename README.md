@@ -19,20 +19,24 @@ Vue组件包装的石蒜模拟器，通过`vue-demi`库实现了同时支持Vue2
 
 ## Install
 
-> ⚠️ 原始项目存在webpack兼容性问题，打包后的代码在加载时会报module相关的加载问题，目前只能通过源码引用
+`npm install @lovekicher/sakana-widget-vue` 
+
+或
+
+`yarn add @lovekicher/sakana-widget-vue`
 
 * Vue2
 
 ```typescript
 import Vue from "vue";
-import SakanaWidget from "@lovekicher/sakana-widget-vue/src/main";
+import SakanaWidget from "@lovekicher/sakana-widget-vue";
 Vue.use(SakanaWidget);
 ```
 * Vue3
 
 ```typescript
 import { createApp } from "vue";
-import SakanaWidget from "@lovekicher/sakana-widget-vue/src/main";
+import SakanaWidget from "@lovekicher/sakana-widget-vue";
 const app = createApp({});
 app.use(SakanaWidget);
 ```

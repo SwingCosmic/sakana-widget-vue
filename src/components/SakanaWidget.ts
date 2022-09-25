@@ -79,7 +79,7 @@ export default defineComponent({
         throw new ReferenceError("Cannot render SakanaWidget before component mounted");
       }
       // 清除所有子元素并创建新的挂载元素，该元素稍后将被替换
-      root.value.innerHTML = '<div class="__mount_root__"></div>';
+      root.value.innerHTML = '<div class="__mount_root__" style="height:100%;width:100%"></div>';
       i.mount(root.value.firstElementChild as HTMLElement);
       return i;
     }
